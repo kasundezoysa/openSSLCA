@@ -19,9 +19,11 @@ docker run --rm -it -v ${PWD}:/home --name openssl  openssl
 #Then change the directory to /home and follows the rest of the commands
 
 (View docker.txt file to see more docker commands)
+
 ---------------------------------------------------------------
 
-#### Setup a CA ###
+Setup a CA
+----------
 1. execute createCA.sh script. 
    It will create your own CA. 
    Your CA server's public key file is cacert.pem. 
