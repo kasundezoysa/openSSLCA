@@ -1,28 +1,26 @@
 # openSSLCA
 A sample script to create a simple CA by using openssl
 
-#In case you donot install openssl follows these instructions
+#In case you donot have openssl follow these instructions
 
--------------------------------------------------------------
-Download and install docker from store.docker.com https://docs.docker.com/docker-for-windows
+Setup Ubuntu Iamge with openssl
+-------------------------------
+1. Download and install docker from store.docker.com https://docs.docker.com/docker-for-windows
 
-#Build a Docker image
+2. Build a Docker image
 
 docker build -t openssl .
 
-#Run a docker continer mapping to your current directory to home
+3. Run a docker continer mapping to your current directory to home
 
 docker run --rm -it -v ${PWD}:/home --name openssl  openssl
 
-#You will get the bash prompt.
+3. You will get the bash prompt. Then change the directory to /home and execute 
 
-#Then change the directory to /home
-
-#Run chmod +x *.sh and make scripts to be executables 
+chmod +x *.sh 
 
 (View docker.txt file to see more docker commands)
 
----------------------------------------------------------------
 
 Setup a CA
 ----------
