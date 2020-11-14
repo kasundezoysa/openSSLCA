@@ -16,7 +16,9 @@ docker run --rm -it -v ${PWD}:/home --name openssl  openssl
 
 #You will get the bash prompt.
 
-#Then change the directory to /home and follows the rest of the commands
+#Then change the directory to /home
+
+#Run chmod +x *.sh and make scripts to be executables 
 
 (View docker.txt file to see more docker commands)
 
@@ -25,18 +27,21 @@ docker run --rm -it -v ${PWD}:/home --name openssl  openssl
 Setup a CA
 ----------
 1. execute createCA.sh script. 
-   It will create your own CA. 
+   It will create your own CA.
+   Make sure to give a proper common name to your CA (eg. UCSC CA).
    Your CA server's public key file is cacert.pem. 
    It is in the sslCA directory. 
    This public key has to be configured as 
    trusted certificate in your application.
 
 2. execute createHostCert.sh script. 
+   Make sure to give a domain name/ip address as the common name (eg. www.scorelab.org).
    Your Web server private key and certificate will be created. 
    Your private keyfile is hostkey.pem and  certificate file is  hostcert.pem.
    You can point these files by editing the  htttpd-ssl.conf.
 
 3. execute createUserCert.sh.
+   Make sure to give your correct name and e-mail address.
    It will create your own personal certificate. 
    Your private key and certificates are packed into usr.pfx file. 
    You can import it to your browser, e-mail or any other application.
