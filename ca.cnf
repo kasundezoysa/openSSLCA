@@ -84,7 +84,7 @@ policy		= policy_match
 [ policy_match ]
 countryName		= match
 stateOrProvinceName	= optional
-organizationName	= match
+organizationName	= optional
 organizationalUnitName	= optional
 commonName		= supplied
 emailAddress		= optional
